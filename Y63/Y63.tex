@@ -1,0 +1,226 @@
+\documentclass[a4paper, 14pt]{extarticle}
+
+\usepackage{../latex/misc/preamble2}
+
+\geometry{a4paper}
+
+% Название дисциплины
+\newcommand{\subject}{Физика} 
+
+% Тип работы
+% lab - для лабораторной работы 
+% hw  - для домашней     работы
+\newcommand{\task}{lab} 
+
+% Номер работы
+\newcommand{\taskNumber}{Я63} 
+
+% Название работы
+\newcommand{\taskNameOne}{} 
+\newcommand{\taskNameTwo}{Радиоактивность.} 
+\newcommand{\taskNameThree}{} 
+
+% Имя студента
+\newcommand{\studentName}{Очкин Н.В.}
+
+% Имя преподававателя
+\newcommand{\teacherName}{Применко А.Э.}
+
+% Группа
+\newcommand{\group}{ФН11-52Б}
+
+% Вариант
+\newcommand{\variant}{9}
+
+\begin{document}
+
+\graphicspath{ {../latex/images} } 
+\input{../latex/frontmatter/titlepage2}
+
+\newgeometry{left=25mm, right=25mm, top=20mm, bottom=20mm}
+
+\graphicspath{ {../latex/images/Y63} }
+
+% Customize section, subsection, subsubsection and paragraph styles
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\small\bfseries}{\thesubsubsection}{1em}{}
+
+\titleformat{\paragraph}
+  {\small\small\bfseries}{\theparagraph}{1em}{}
+
+\setstretch{1}
+\linespread{1.2}
+
+\setlength{\parindent}{0pt}
+
+\fontsize{14pt}{16pt}\selectfont
+
+% --------------------------------------START--------------------------------------
+
+\section*{Ход выполнения работы}\vspace{-20pt}\rule{\linewidth}{0.1mm}
+
+\vfill
+
+\begin{table}[h!]
+    \centering
+    \resizebox{\textwidth}{!}{ % Scale the table to the width of the text
+    \setlength{\tabcolsep}{10pt} % Add horizontal space between columns
+    \begin{tabular}{cccccc}
+    \toprule
+    $i$ & Фон & Препарат 0 & Препарат 1 & Препарат 2 & Препарат 3 \\
+    \midrule
+    1  & 6  & 54 & 9  & 20 & 22 \\
+    2  & 10 & 51 & 13 & 23 & 18 \\
+    3  & 7  & 51 & 10 & 17 & 19 \\
+    4  & 8  & 63 & 7  & 22 & 26 \\
+    5  & 7  & 57 & 10 & 21 & 23 \\
+    6  & 8  & 55 & 9  & 20 & 24 \\
+    7  & 6  & 66 & 9  & 18 & 20 \\
+    8  & 9  & 49 & 8  & 17 & 20 \\
+    9  & 9  & 67 & 13 & 24 & 23 \\
+    10 & 5  & 59 & 8  & 16 & 24 \\
+    11 & 9  & 52 & 10 & 20 & 22 \\
+    12 & 8  & 43 & 8  & 18 & 25 \\
+    13 & 5  & 56 & 9  & 19 & 24 \\
+    14 & 10 & 57 & 13 & 14 & 26 \\
+    15 & 6  & 56 & 7  & 23 & 24 \\ 
+    \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+\vfill
+
+\begin{alignat*}{2}
+    \text{N}_\text{Ф} &= 226 & \hspace{100pt} \null & \\
+    \text{N}_0 &= 1672 & \text{N}_0 - \text{N}_\text{Ф} &= 1446 \\ 
+    \text{N}_1 &= 286 & \text{N}_1 - \text{N}_\text{Ф} &= 60 \\
+    \text{N}_2 &= 584 & \text{N}_2 - \text{N}_\text{Ф} &= 358 \\
+    \text{N}_3 &= 680 & \text{N}_3 - \text{N}_\text{Ф} &= 454 \\
+\end{alignat*}
+
+\vfill
+
+\newpage
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    Коэффициент регистрации & $f=0.04$ \\
+    \hline
+    Масса, г, KCl в препарате 3 & $m=25$ \\
+    \hline
+    Количество атомов $^{40} \mathrm{K}$ в препарате 3 & $N_{40}=2.368 \cdot 10^{19}$ \\
+    \hline
+    Скорость счета для калия, 1/с & $n_{p}= 1.681$ \\
+    \hline
+    Активность калия, Бк & $A=42.025$ \\
+    \hline
+    Период полураспада (в секундах и годах) & $T=3.905 \cdot 10^{17}$ \\
+    \hline
+    Погрешность измерения $T, \%$ & $\varepsilon= 3 \cdot 10^{10}$ \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{equation*}
+    N_{40} = \delta N_A \cfrac{m}{M} \approx 2.368 \cdot 10^{19},
+\end{equation*}
+где \\
+$N_A = 6.02 \cdot 10^{23}$ моль$^{-1}$ - число Авогадро, \\
+$M = 75$ $\frac{\text{г}}{\text{моль}}$ - молярная масса соли, \\
+$\delta = 1.18 \cdot 10^{-4}$ - доля радиоактивного изотопа. 
+
+\begin{equation*}
+    n_p = \cfrac{\text{N}_3 - \text{N}_\text{Ф}}{t} \approx 1.681,
+\end{equation*}
+где \\
+$t$ = 270с - полное время 15 измерений.
+
+\begin{equation*}
+    A = \cfrac{n_p}{f} = 42.025
+\end{equation*}
+
+\begin{equation*}
+    T = 0.693 \hspace{3pt} N_{40} / A \approx 3.905 \cdot 10^{17}
+\end{equation*}
+$T_{\text{табл}} = 1.3 \cdot 10^9$ лет.
+
+\begin{equation*}
+    \varepsilon = 100 \% (T - T_{\text{табл}}) / T_{\text{табл}} \approx 3 \cdot 10^{10} \hspace{3pt} \%
+\end{equation*}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Удельная активность, Бк/г, препарат 1 & $a=0.581$ & $\varepsilon=37.83$ \\
+    \hline
+    Содержание калия, \%, препарат 2 & $\Omega=2.174$ & $\varepsilon=37.83$ \\
+    \hline
+    Активность калия в теле человека, Бк & $A_{\text{ч}}=4200$ &  \\
+    \hline
+    Поглощенная энергия, Дж & $E=0.01056$ &  \\
+    \hline
+    Поглощенная доза, Гр & $D_{\mathrm{K}}=0.000075$ &  \\
+    \hline
+    Эквивалентная доза, Зв & $H_{\mathrm{K}}=0.0015$ &  \\
+    \hline
+    Доля годовой дозы & $H_{\mathrm{K}} / H=0.75$ &  \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{equation*}
+    a = \cfrac{N - N_{\text{Ф}}}{N_0 - N_{\text{Ф}}} \cdot a_0 \approx 0.581,
+\end{equation*}
+где \\
+$N = N_1 = 286$ - число импульсов от исследуемого препарата,\\
+$N_{\text{Ф}} = 226$ - число импульсов фона,\\
+$N_0 = 1672$ - число импульсов от эталонного препарата,\\
+$a_0 = 14$ Бк / г - удельная активность соли KCl с испусканием $\beta$ - частиц.\\
+
+\begin{equation*}
+    \Omega = (52.4 \hspace{3pt} \%) \cfrac{N - N_{\text{Ф}}}{N_0 - N_{\text{Ф}}} = 2.174
+\end{equation*}
+
+\begin{equation*}
+    \varepsilon = 100 \% \sqrt{\cfrac{N + N_{\text{Ф}}}{(N - N_{\text{Ф}})^2} + \cfrac{N_0 + N_{\text{Ф}}}{(N_0 - N_{\text{Ф}})^2}} \approx 37.83 \%
+\end{equation*}
+
+\begin{equation*}
+    A_{\text{ч}} = m_{\text{ч}} a_0 = 4200,
+\end{equation*}
+где \\
+$m_{\text{ч}} = 140$ г, \\
+$a_0 = 30$ Бк / г
+
+\begin{equation*}
+    E = N \cdot E_1 \approx 0.01056, 
+\end{equation*}
+где \\
+$N = A \cdot T$ - количество распадов в год, \\
+$A = 4200$ - активность, \\
+$T = 365 \cdot 24 \cdot 3600$ - количесвто секунд в году, \\
+$E_1 = 0.5 \cdot 1.6 \cdot 10^{-13}$ Дж - энергия одного распада 
+
+\begin{equation*}
+    D = \cfrac{E}{m} \approx 75e-6
+\end{equation*}
+
+\begin{equation*}
+    H = K D \approx 0.0015
+\end{equation*}
+
+\begin{equation*}
+    \cfrac{H_{\mathrm{K}}}{H} = 0.75
+\end{equation*}
+
+\end{document}
